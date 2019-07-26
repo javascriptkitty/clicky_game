@@ -8,15 +8,16 @@ class Main extends Component {
     pictures
   };
 
+  //mixCards = id => {};
   render() {
     return (
       <div className="container">
         {this.state.pictures.map(picture => (
           <Card
-            id={pictures.id}
-            link={pictures.id}
+            id={picture.id}
+            link={picture.link}
             data-value="pick"
-            // onClick =
+            //onClick={this.mixCards}
           />
         ))}
       </div>

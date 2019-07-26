@@ -1,8 +1,12 @@
 import React from "react";
 import "./style.css";
 
-function Card() {
-  return <div>card</div>;
+function Card(props) {
+  return (
+    <div>
+      <img src={props.link} />
+    </div>
+  );
 }
 
 export default Card;
