@@ -1,0 +1,10 @@
+.header {
+  padding: 50px 0;
+  display: flex;
+}
+
+.header div {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
