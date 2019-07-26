@@ -8,7 +8,15 @@ class Main extends Component {
     pictures
   };
 
-  //mixCards = id => {};
+  mixCards = id => {
+    debugger;
+    let pictures = this.state.pictures.sort(function() {
+      return 0.5 - Math.random();
+    });
+    console.log(pictures);
+    this.setState({ pictures });
+  };
+
   render() {
     return (
       <div className="container">
@@ -17,7 +25,7 @@ class Main extends Component {
             id={picture.id}
             link={picture.link}
             data-value="pick"
-            //onClick={this.mixCards}
+            onClick={this.mixCards}
           />
         ))}
       </div>
