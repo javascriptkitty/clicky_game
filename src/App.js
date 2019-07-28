@@ -9,6 +9,7 @@ class App extends Component {
     score: 0,
     topScore: 0,
     message: "Click an image to begin!",
+    shake: false,
     clicked: []
   };
 
@@ -21,6 +22,7 @@ class App extends Component {
             ? this.state.topScore
             : this.state.score,
         message: "You guessed incorrectly!",
+        shake: true,
         clicked: []
       });
     } else {
@@ -28,6 +30,7 @@ class App extends Component {
         score: this.state.score + 1,
         topScore: this.state.topScore,
         message: "You guessed correctly!",
+        shake: false,
         clicked: this.state.clicked.concat(id)
       });
     }
@@ -36,14 +39,14 @@ class App extends Component {
   };
   render() {
     return (
-      <div className="App">
+      <div className={this.state.shake?"App shake": "App"}>
         <Header
           message={this.state.message}
           score={this.state.score}
           topScore={this.state.topScore}
         />
         <Hero />
-        <Main onClickCard={this.handleClick} />
+        <Main onClickCard={this.handleClick}  />
       </div>
     );
   }
