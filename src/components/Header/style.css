@@ -1,10 +1,22 @@
 .header {
-  padding: 50px 0;
+  padding-top: 25px;
   display: flex;
+  font-size: 21pt;
+  color: #001d18;
 }
 
 .header div {
   flex: 1;
   display: flex;
   justify-content: center;
+}
+.logo {
+  font-family: "Titan One", cursive;
+  font-size: 26px;
+}
+.logo,
+.message,
+.scores {
+  display: flex;
+  align-items: flex-end;
 }

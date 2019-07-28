@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background: url(/images/busstop.jpg) no-repeat center;
+  background-size: cover;
+}

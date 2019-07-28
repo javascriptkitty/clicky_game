@@ -22,7 +22,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="wrapper">
         {this.state.pictures.map(picture => (
           <Card
             id={picture.id}

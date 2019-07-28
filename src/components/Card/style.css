@@ -1,7 +1,14 @@
 .card {
-  width: 300px;
+  width: 270px;
   margin: 15px;
   padding: 10px;
+  box-shadow: 0 0 15px 0px#001d18;
+  cursor: pointer;
+}
+
+.card:active {
+  width: 268px;
+  margin: 16px;
 }
 
 img {

@@ -1,5 +1,7 @@
-.container {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  max-width: 1300px;
+  align-self: center;
 }
