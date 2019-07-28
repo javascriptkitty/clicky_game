@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import pictures from "./pics.json";
+
 import Card from "../Card/Card";
 
 class Main extends Component {
@@ -8,12 +9,14 @@ class Main extends Component {
     pictures
   };
 
-  mixCards = id => {
+  handleOnClick = cardId => {
     debugger;
+
     let pictures = this.state.pictures.sort(function() {
       return 0.5 - Math.random();
     });
-    console.log(pictures);
+
+    this.props.onClickCard(cardId);
     this.setState({ pictures });
   };
 
@@ -24,8 +27,7 @@ class Main extends Component {
           <Card
             id={picture.id}
             link={picture.link}
-            data-value="pick"
-            onClick={this.mixCards}
+            onClick={this.handleOnClick}
           />
         ))}
       </div>
