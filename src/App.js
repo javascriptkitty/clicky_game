@@ -21,10 +21,16 @@ class App extends Component {
           this.state.topScore > this.state.score
             ? this.state.topScore
             : this.state.score,
-        message: "Click an image to begin!",
+        message: "You guessed incorrectly!",
         clicked: []
       });
     } else {
+      this.setState({
+        score: this.state.score + 1,
+        topScore: this.state.topScore,
+        message: "You guessed correctly!",
+        clicked: this.state.clicked.concat(id)
+      });
     }
     this.state.clicked.push(id);
     console.log(this.state.clicked);
@@ -32,7 +38,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header score={this.state.score} topScore={this.state.topScore} />
+        <Header
+          message={this.state.message}
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
         <Hero />
         <Main onClickCard={this.handleClick} />
         <Footer />
